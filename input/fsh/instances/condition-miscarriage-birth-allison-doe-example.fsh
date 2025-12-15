@@ -1,0 +1,23 @@
+Instance: condition-miscarriage-birth-allison-doe-example
+InstanceOf: Condition
+Title: "Condition - example of a miscarriage"
+Description: "Example of a miscarriage during pregnancy."
+Usage: #example
+* meta.extension[0].url = "http://hl7.org/fhir/StructureDefinition/instance-name"
+* meta.extension[=].valueString = "Condition Example"
+* meta.extension[+].url = "http://hl7.org/fhir/StructureDefinition/instance-description"
+* meta.extension[=].valueMarkdown = "This is a condition example for the *US Core Condition Profile*."
+* meta.versionId = "1"
+* meta.lastUpdated = "2022-03-15T14:45:07.189+00:00"
+* meta.source = "#sfUL2OhQk05st90n"
+* meta.profile = "http://hl7.org/fhir/us/core/StructureDefinition/us-core-condition"
+* clinicalStatus = $condition-clinical#active "Active"
+* clinicalStatus.text = "Active"
+* verificationStatus = $condition-ver-status#confirmed "Confirmed"
+* verificationStatus.text = "Confirmed"
+* category = $condition-category#problem-list-item "Problem List Item"
+* category.text = "Problem"
+* code = $sct#10058006 "Miscarriage with amniotic fluid embolism (disorder)"
+* code.text = "Miscarriage with amniotic fluid embolism (disorder)"
+* subject = Reference(patient-allison-doe-example) "Allison Doe"
+* onsetDateTime = "2022-01-20"

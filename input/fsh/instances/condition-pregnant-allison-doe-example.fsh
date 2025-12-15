@@ -1,0 +1,28 @@
+Instance: condition-pregnant-allison-doe-example
+InstanceOf: Condition
+Title: "Condition - Allison Doe pregnancy example"
+Description: "Example of a pregnancy condition associated with a case of pregnancy-associated maternal death."
+Usage: #example
+* meta.extension[0].url = "http://hl7.org/fhir/StructureDefinition/instance-name"
+* meta.extension[=].valueString = "Condition Example"
+* meta.extension[+].url = "http://hl7.org/fhir/StructureDefinition/instance-description"
+* meta.extension[=].valueMarkdown = "This is a condition example for the *US Core Condition Profile*."
+* meta.versionId = "3"
+* meta.lastUpdated = "2022-09-26T15:28:39.498+00:00"
+* meta.source = "#GtyxE93Cwp8aS5Yj"
+* meta.profile = "http://hl7.org/fhir/us/core/StructureDefinition/us-core-condition"
+* identifier.use = #usual
+* identifier.type = $v2-0203#MR "Medical Record Number"
+* identifier.type.text = "Medical Record Number"
+* identifier.system = "http://hospital.smarthealthit.org"
+* identifier.value = "10327025"
+* clinicalStatus = $condition-clinical#active "Active"
+* clinicalStatus.text = "Active"
+* verificationStatus = $condition-ver-status#confirmed "Confirmed"
+* verificationStatus.text = "Confirmed"
+* category = $condition-category#problem-list-item "Problem List Item"
+* category.text = "Problem"
+* code = $sct#77386006 "Pregnancy (finding)"
+* code.text = "Pregnancy (finding)"
+* subject = Reference(patient-allison-doe-example) "Allison Doe"
+* onsetDateTime = "2022-01-12"

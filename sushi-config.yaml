@@ -1,0 +1,104 @@
+canonical: http://hl7.org/fhir/us/mihr
+fhirVersion: 4.0.1
+# FSHOnly: true
+applyExtensionMetadataToRoot: false
+id: hl7-fhir-us-mihr
+name: MaternalInfantHealthResearch
+title: Longitudinal Maternal & Infant Health Information for Research
+status: draft
+version: 1.0.0
+copyrightYear: 2025
+releaseLabel: STU 1.0.0
+jurisdiction: urn:iso:std:iso:3166#US "United States of America"
+license: CC0-1.0
+# canonical, fhirVersion, id, name, status, copyrightYear, releaseLabel
+
+# --- Contact Information ---
+contact:
+  - name: HL7 International
+    telecom:
+      - system: url
+        value: http://www.hl7.org/Special/committees/pher/index.cfm
+
+dependencies:
+  hl7.fhir.us.core:
+    version: 5.0.1
+    uri: http://hl7.org/fhir/us/core/ImplementationGuide/hl7.fhir.us.core#5.0.1
+    id: uscore
+  hl7.fhir.us.vr-common-library:
+    version: 1.0.0
+    uri: http://hl7.org/fhir/us/vr-common-library/ImplementationGuide/hl7.fhir.us.vr-common-library#1.0.0
+    id: hl7fhirusvrcommonlibrary
+  hl7.fhir.us.bfdr:
+    version: 1.0.0
+    uri: http://hl7.org/fhir/us/bfdr/ImplementationGuide/hl7.fhir.us.bfdr#1.0.0
+    id: hl7fhirusbfdr
+  us.nlm.vsac:
+    version: 0.9.0
+    uri: http://fhir.org/packages/us.nlm.vsac/ImplementationGuide/us.nlm.vsac
+    id: usnlmvsac
+  fhir.cqf.common:
+    version: 4.0.1
+    uri: http://fhir.org/guides/cqf/common/ImplementationGuide/fhir.cqf.common#4.0.1
+    id: fhircqfcommon
+  hl7.fhir.us.cqfmeasures:
+    version: 3.0.0
+    uri: http://hl7.org/fhir/us/cqfmeasures/ImplementationGuide/hl7.fhir.us.cqfmeasures#3.0.0
+    id: qmi
+
+parameters:
+  # Ballot and CI URLs
+  ballot-url: http://hl7.org/fhir/us/mihr/2022May
+  ci-build: http://build.fhir.org/ig/HL7/fhir-mmm-ig
+  vcs-repository: https://github.com/HL7/fhir-mmm-ig
+  ig-wg: pher
+
+menu:
+  Home Page: index.html
+  Table of Contents: toc.html
+  Clinical Quality Framework for Research: clinical_quality_framework_for_research.html
+  Research Considerations: research_considerations.html
+  This Specification: this_specification.html
+  Downloads: downloads.html
+  Artifacts Summary: artifacts.html
+
+groups:
+  GroupMeasureHDP:
+    name: Hypertensive Disorders of Pregnancy Measure Examples
+    description: Group of Resources pertinent to the Hypertensive Disorders of Pregnancy cohort
+    resources:
+      - Library/PIHCohort
+      - Measure/PIHCohort
+  GroupMeasurePAMD:
+    name: Pregnancy-Associated Maternal Deaths Measure Examples
+    description: Group of Resources pertinent to Pregnancy-Associated Maternal Deaths
+    resources:
+      - Library/PAMDeaths
+      - Measure/PAMDeaths
+  GroupExampleHDP:
+    name: Hypertensive Disorders of Pregnancy Clinical Examples
+    description: Group of FHIR resources pertinent to testing/evaluating the Hypertensive Disorders of Pregnancy measure
+    resources:
+      - Patient/patient-child-jane-smith-example
+      - Encounter/encounter-delivery-jane-smith-example
+      - Encounter/encounter-newborn-child-jane-smith-example
+      - RelatedPerson/relatedperson-jane-smith-example
+      - Patient/patient-jane-smith-example
+      - Condition/condition-pih-jane-smith-example
+      - Condition/condition-pregnant-jane-smith-example
+      - Observation/observation-child-john-smith-example
+      - Observation/observation-child-peter-doe-example
+      - Patient/patient-child-john-smith-example
+  GroupExamplePAMD:
+    name: Pregnancy-Associated Maternal Deaths Clinical Examples
+    description: Group of FHIR resources pertinent to testing/evaluating the Pregnancy-Associated Maternal Deaths measure
+    resources:
+      - Patient/patient-allison-doe-example
+      - Patient/patient-child-bobby-doe-example
+      - Patient/patient-child-peter-doe-example
+      - RelatedPerson/relatedperson-child-bobby-doe-example
+      - Condition/condition-miscarriage-birth-allison-doe-example
+      - Observation/observation-allison-doe-example
+      - FamilyMemberHistory/familymemberhistory-jane-smith-example
+      - RelatedPerson/relatedperson-child-peter-doe-example
+      - Condition/condition-pregnant-allison-doe-example
