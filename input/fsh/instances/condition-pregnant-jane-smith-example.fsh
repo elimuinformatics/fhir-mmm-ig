@@ -1,0 +1,28 @@
+Instance: condition-pregnant-jane-smith-example
+InstanceOf: Condition
+Title: "Condition - Jane Smith pregnancy example"
+Description: "Example of a pregnancy condition."
+Usage: #example
+* meta.extension[0].url = "http://hl7.org/fhir/StructureDefinition/instance-name"
+* meta.extension[=].valueString = "Condition Example"
+* meta.extension[+].url = "http://hl7.org/fhir/StructureDefinition/instance-description"
+* meta.extension[=].valueMarkdown = "This is a condition example for the *US Core Condition Profile*."
+* meta.versionId = "2"
+* meta.lastUpdated = "2022-09-26T15:28:39.496+00:00"
+* meta.source = "#lssANY6lomaNOAEr"
+* meta.profile = "http://hl7.org/fhir/us/core/StructureDefinition/us-core-condition"
+* identifier.use = #usual
+* identifier.type = $v2-0203#MR "Medical Record Number"
+* identifier.type.text = "Medical Record Number"
+* identifier.system = "http://hospital.smarthealthit.org"
+* identifier.value = "1032702"
+* clinicalStatus = $condition-clinical#active "Active"
+* clinicalStatus.text = "Active"
+* verificationStatus = $condition-ver-status#confirmed "Confirmed"
+* verificationStatus.text = "Confirmed"
+* category = $condition-category#problem-list-item "Problem List Item"
+* category.text = "Problem"
+* code = $sct#77386006 "Pregnancy (finding)"
+* code.text = "Pregnancy (finding)"
+* subject = Reference(patient-jane-smith-example) "Jane Smith"
+* onsetDateTime = "2021-06-18"

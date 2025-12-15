@@ -1,0 +1,23 @@
+Instance: condition-pih-jane-smith-example
+InstanceOf: Condition
+Title: "Condition - pregnancy-induced hypertension example"
+Description: "Example of a pregnancy-induced hypertension condition."
+Usage: #example
+* meta.extension[0].url = "http://hl7.org/fhir/StructureDefinition/instance-name"
+* meta.extension[=].valueString = "Condition Example"
+* meta.extension[+].url = "http://hl7.org/fhir/StructureDefinition/instance-description"
+* meta.extension[=].valueMarkdown = "This is a condition example for the *US Core Condition Profile*."
+* meta.versionId = "1"
+* meta.lastUpdated = "2022-03-15T14:53:19.001+00:00"
+* meta.source = "#zMP6IUiOaDNV81SY"
+* meta.profile = "http://hl7.org/fhir/us/core/StructureDefinition/us-core-condition"
+* clinicalStatus = $condition-clinical#active "Active"
+* clinicalStatus.text = "Active"
+* verificationStatus = $condition-ver-status#confirmed "Confirmed"
+* verificationStatus.text = "Confirmed"
+* category = $condition-category#problem-list-item "Problem List Item"
+* category.text = "Problem"
+* code = $sct#48194001 "Pregnancy-induced hypertension (disorder)"
+* code.text = "Pregnancy-induced hypertension (disorder)"
+* subject = Reference(patient-jane-smith-example) "Jane Smith"
+* onsetDateTime = "2021-10-11"

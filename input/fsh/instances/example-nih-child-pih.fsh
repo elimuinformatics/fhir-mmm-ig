@@ -1,0 +1,53 @@
+Instance: example-nih-child-pih
+InstanceOf: USCorePatientProfile
+Title: "Child of Mother Patient with Pregnancy-Induced Hypertension"
+Description: "Example child of a mother Patient with pregnancy-induced hypertension."
+Usage: #example
+* meta.versionId = "3"
+* meta.lastUpdated = "2022-09-26T15:29:46.558+00:00"
+* meta.source = "#x30Y8MowDBh3GsuD"
+* extension[0].extension[0].url = "ombCategory"
+* extension[=].extension[=].valueCoding = urn:oid:2.16.840.1.113883.6.238#2106-3 "White"
+* extension[=].extension[+].url = "ombCategory"
+* extension[=].extension[=].valueCoding = urn:oid:2.16.840.1.113883.6.238#1002-5 "American Indian or Alaska Native"
+* extension[=].extension[+].url = "ombCategory"
+* extension[=].extension[=].valueCoding = urn:oid:2.16.840.1.113883.6.238#2028-9 "Asian"
+* extension[=].extension[+].url = "detailed"
+* extension[=].extension[=].valueCoding = urn:oid:2.16.840.1.113883.6.238#1586-7 "Shoshone"
+* extension[=].extension[+].url = "detailed"
+* extension[=].extension[=].valueCoding = urn:oid:2.16.840.1.113883.6.238#2036-2 "Filipino"
+* extension[=].extension[+].url = "text"
+* extension[=].extension[=].valueString = "Mixed"
+* extension[=].url = "http://hl7.org/fhir/us/core/StructureDefinition/us-core-race"
+* extension[+].extension[0].url = "ombCategory"
+* extension[=].extension[=].valueCoding = urn:oid:2.16.840.1.113883.6.238#2135-2 "Hispanic or Latino"
+* extension[=].extension[+].url = "detailed"
+* extension[=].extension[=].valueCoding = urn:oid:2.16.840.1.113883.6.238#2184-0 "Dominican"
+* extension[=].extension[+].url = "detailed"
+* extension[=].extension[=].valueCoding = urn:oid:2.16.840.1.113883.6.238#2148-5 "Mexican"
+* extension[=].extension[+].url = "text"
+* extension[=].extension[=].valueString = "Hispanic or Latino"
+* extension[=].url = "http://hl7.org/fhir/us/core/StructureDefinition/us-core-ethnicity"
+* extension[+].url = "http://hl7.org/fhir/us/core/StructureDefinition/us-core-birthsex"
+* extension[=].valueCode = #M
+* identifier.use = #usual
+* identifier.type = $v2-0203#MR "Medical Record Number"
+* identifier.type.text = "Medical Record Number"
+* identifier.system = "http://hospital.smarthealthit.org"
+* identifier.value = "1032702"
+* active = true
+* name.family = "Day"
+* name.given[0] = "Daniel"
+* name.given[+] = "E."
+* name.period.start = "2015-06-01"
+* telecom.system = #phone
+* telecom.value = "555-555-5555"
+* telecom.use = #home
+* gender = #male
+* birthDate = "2015-06-01"
+* address.line = "49 Sunny St"
+* address.city = "Sunnyvale"
+* address.state = "CA"
+* address.postalCode = "90121"
+* address.country = "US"
+* address.period.start = "2015-06-01"
