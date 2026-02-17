@@ -63,6 +63,12 @@ menu:
   Artifacts Summary: artifacts.html
 
 groups:
+  GroupMeasureBHD:
+    name: Behavioral Health Issues During Pregnancy Measure Examples
+    description: Group of Resources pertinent to the Behavioral Health Issues During Pregnancy cohort
+    resources:
+      - Library/MaternalBehavioralHealthCohort
+      - Measure/MaternalBehavioralHealthCohort
   GroupMeasureHDP:
     name: Hypertensive Disorders of Pregnancy Measure Examples
     description: Group of Resources pertinent to the Hypertensive Disorders of Pregnancy cohort
@@ -102,3 +108,14 @@ groups:
       - FamilyMemberHistory/familymemberhistory-jane-smith-example
       - RelatedPerson/relatedperson-child-peter-doe-example
       - Condition/condition-pregnant-allison-doe-example
+  GroupExampleMBH:
+    name: Maternal Behavioral Health Issues During Pregnancy Clinical Examples
+    description: Group of FHIR resources pertinent to testing/evaluating the Behavioral Health Issues During Pregnancy measure
+    resources:
+      - Patient/MotherPatient
+      - Patient/InfantPatient
+      - RelatedPerson/InfantMotherLink
+      - MedicationRequest/AntidepressantPrescription
+      - Encounter/DeliveryEncounter
+      - Procedure/DeliveryProcedure
+      - Observation/EPDS-Screening

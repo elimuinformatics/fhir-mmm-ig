@@ -2,10 +2,11 @@ ValueSet: ValueSetHypertensiveDisordersOfPregnancyICD10
 Id: hypertensive-disorders-pregnancy-ICD
 Title: "ValueSet – Hypertensive Disorders of Pregnancy ICD"
 Description: "This value set includes terms related to hypertensive disorders of pregnancy which include pre-existing hypertension, chronic hypertension, hypertensive chronic kidney disease, essential hypertension, hypertension diagnosed during the course of pregnancy and diagnoses of pre-eclampsia and eclampsia."
+* ^status = #draft
+* ^url = "http://hl7.org/fhir/us/mihr/ValueSet/hypertensive-disorders-pregnancy-ICD"
 * ^meta.versionId = "7"
 * ^meta.lastUpdated = "2022-03-01T17:34:08.569+00:00"
 * ^meta.source = "#SooQ5o4wacYGudiF"
-* ^status = #draft
 * ^experimental = false
 * ^copyright = "ICD-10-cm"
 * $icd10cm#O10.01 "Pre-existing essential hypertension complicating pregnancy,"
