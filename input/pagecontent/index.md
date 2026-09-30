@@ -17,8 +17,9 @@ Future users may include health departments using EHR data to inform public heal
 
 This IG will eventually support mapping maternal data across health records from specialty care and linking mother and child data harmonized across a broad set of use cases. This will support researchers in identifying root causes of maternal mortality and pediatric developmental problems, including SDOH such as limited income, poor nutrition, lack of medical coverage, etc. The goal of the project is to create a method to standardize data capture for comparative analysis over time to improve health outcomes and define a framework for studying additional research populations in the future.
 
-Initial use cases of this IG focus on hypertensive disorders of pregnancy pre, ante, and postpartum and pregnancy and subsequent death within a specific timeframe. The intent is to specify the consistent capture of clinical data of interest to maternal health researchers and outline implementing FHIR resources for that capture. Currently, the IG defines two initial, separate research use case populations: 
+Initial use cases of this IG focus on behavioral health issues during pregnancy, hypertensive disorders of pregnancy pre, ante, and postpartum and pregnancy and subsequent death within a specific timeframe. The intent is to specify the consistent capture of clinical data of interest to maternal health researchers and outline implementing FHIR resources for that capture. Currently, the IG defines two initial, separate research use case populations: 
 
+* Behavioral health issues during pregnancy. This cohort includes women who have behavioral health diagnoses during and after pregnancy.
 *	Pregnancy and subsequent death within a specific time frame: This cohort includes women who died within a year (365 days) of a pregnancy regardless of cause of death or pregnancy outcome.
 *	Hypertensive Disorders of pregnancy: This use case focuses on individuals with a diagnosis of pregnancy-induced hypertension, gestational hypertension and/or post-partum hypertension diagnoses within 6 weeks of delivery.
 
@@ -62,6 +63,16 @@ This table lists the authors, subject matter experts, and the affiliations which
   </tr>
 </thead>
 <tbody>
+  <tr>
+    <td class="tg-4erg">NORC</td>
+    <td class="tg-0pky"> </td>
+    <td class="tg-0pky"> </td>
+  </tr>
+  <tr>
+    <td class="tg-0pky">To be added </td>
+    <td class="tg-0pky">-</td>
+    <td class="tg-0pky">-</td>
+  </tr>
   <tr>
     <td class="tg-4erg">Lantana Consulting Group</td>
     <td class="tg-0pky"> </td>

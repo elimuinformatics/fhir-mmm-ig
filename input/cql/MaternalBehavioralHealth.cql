@@ -24,12 +24,6 @@ valueset "Mood Stabilizer Medications": 'http://cts.nlm.nih.gov/fhir/ValueSet/2.
 
 valueset "Serum Level of Mood Stabilizers": 'http://cts.nlm.nih.gov/fhir/ValueSet/2.16.840.1.113762.1.4.1196.4861'
 
-// valueset "Behavorial Health Medications": 'http://hl7.org/fhir/us/mihr/ValueSet/behavioral-health-medications'
-// valueset "Behavorial Health Medications": 'http://hl7.org/fhir/us/mihr/ValueSet/hypertensive-disorders-pregnancy'
-
-// valueset "Hypertensive Disorders Pregnancy ICD": 'http://www.hl7.org/fhir/us/mihr/ValueSet/hypertensive-disorders-pregnancy-ICD'
-// valueset "Hypertensive Disorders Pregnancy SNOMED": 'http://www.hl7.org/fhir/us/mihr/ValueSet/hypertensive-disorders-pregnancy-SNOMED'
-
 //Delivery Procedure Group
 valueset "Delivery Live Births": 'http://cts.nlm.nih.gov/fhir/ValueSet/2.16.840.1.113883.3.464.1003.111.12.1015'
 valueset "Delivery Procedure": 'http://cts.nlm.nih.gov/fhir/ValueSet/2.16.840.1.113762.1.4.1078.5'
@@ -89,6 +83,9 @@ parameter "Measurement Period" Interval<DateTime> default Interval[@2021-01-01T0
 
 context Patient
 
+// ***************************************************************************************
+// the expressions below specify the eligible patient population for this cohort measure.
+// ***************************************************************************************
 define "Initial Population":
 	exists("Behavioral Health Disorders During or After Pregnancy")
 	or 
@@ -240,7 +237,10 @@ define "Non-Live Birth Group":
 	union [Condition: "Non Live Birth Diagnoses"]
 
 
-// add supplemental data elements from the mom's record	
+// ***************************************************************************************
+// These expressions specify the supplemental data elements from the mom's record that 
+// are exported out in the measure report
+// ***************************************************************************************
 define "SDE Patient":
 	[Patient] p
 
@@ -464,6 +464,11 @@ define "SDE Infant Patient":
 	let childPatient: FHIRHelpers.resolve(R.patient) as Patient
 	return childPatient
 
+// ***************************************************************************************
+// NOTE: all expressions from here on below are supplemental data elements from the child's record.
+// However, the CQL syntax in these expressions do not currently specify the  related-context retrieves
+// as the CQFramework engine and the VS code CQL plugin do not support related-context retrieves.
+// ***************************************************************************************
 define "SDE Infant Body Weight at Birth":
 	First ([Observation: "Body Weight"] O
 				where (O.status in { 'final', 'amended' }
@@ -511,16 +516,3 @@ define "SDE Initial Well Child Visit":
 		)
 		sort by period.start asc
 	)
-
-/*
-define "ChildHeadCircumference":
-  ["Child from this pregnancy" -> Observation: "Head Circumference"] O
-    where O.status in { 'final', 'amended' }
-
-define "LatestHeadCircumference":
-  Last(
-    "ChildHeadCircumference" C
-      sort by effective
-  ).value as FHIR.Quantity
-
-*/

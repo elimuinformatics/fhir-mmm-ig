@@ -1,6 +1,6 @@
 Instance: MaternalBehavioralHealth-Cohort-of-CQFMComputableMeasure
 InstanceOf: CQFMComputableMeasure
-Title: "Measure for Hypertensive Disorders of Pregnancy"
+Title: "Measure for Behavioral Health Issues during Pregnancy"
 Description: "Measure for Behavioral Health Issues during Pregnancy"
 Usage: #definition
 * id = "MaternalBehavioralHealthCohort"
